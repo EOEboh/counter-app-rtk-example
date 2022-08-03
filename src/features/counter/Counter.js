@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../App.css';
+
 // importing hooks from redux
 import { useSelector, useDispatch } from 'react-redux';
 // importing actions
@@ -12,16 +14,16 @@ const Counter = () => {
     const dispatch = useDispatch();
 
   return (
-    <div>
-        <div>
+    <div className='main-div'>
+        <div className='count-div'>
             {count}
         </div>
 
-        <div>
-            <button onClick={() => dispatch(increment())}>
+        <div className='btn-div'>
+            <button className='btn one' onClick={() => dispatch(increment())}>
                 +
             </button>
-            <button onClick={() => dispatch(decrement())}>
+            <button className='btn two' onClick={() => dispatch(decrement())}>
                 -
             </button>
         </div>
